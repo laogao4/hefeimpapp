@@ -1,0 +1,239 @@
+/**app.wxss**/
+@import "utils/weui.wxss";
+view{
+  box-sizing: border-box;
+  font-family: 微软雅黑;
+}
+text{
+  font-family: 微软雅黑;
+}
+image{
+  display: block;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page{
+  background: #f5f5f5;
+}
+radio{
+  height: 35rpx !important;
+  width: 35rpx !important;
+  margin-right: 30rpx;  
+}
+.shade{
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: block;
+  bottom: 0;
+}
+.table_th{
+  float: left;
+  width: 100%;
+  line-height: 70rpx;
+  height: 70rpx;
+  font-size: 0.85rem;
+}
+.table_th span{
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.table_tr{
+  float: left;
+  width: 100%;
+  line-height: 60rpx;
+  height: 60rpx;
+  font-size: 0.85rem;
+}
+.table_tr span{
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.user_number{
+  float: left;
+  width: 50%;
+}
+.title{
+  float: left;
+  width: 100%;
+  background: #fff;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  line-height: 80rpx;
+  height: 80rpx;
+  font-weight: bold;
+}
+.back{
+  width: 120rpx;
+  height:120rpx;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  right: 20rpx;
+  bottom: 200rpx;
+  border-radius: 60rpx;
+  opacity: 0.6;
+}
+.back image{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 30rpx;
+}
+.tips{
+  width:100%;
+  line-height: 40rpx;
+  font-size: 0.7rem;
+  padding: 10rpx 3%;
+  box-sizing: border-box;
+}
+.tips span{
+  color: red;
+}
+.input-line{
+  font-size: 32rpx;
+  font-weight: 400;
+  color: #231815;
+  height: 125rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 50rpx;
+  border-bottom: 1px solid rgb(215,215,215);
+}
+.input-line .line-title{
+  width: 200rpx;
+  text-align: left;
+  padding-right: 20rpx;
+  border:0;
+}
+.input-line .require{
+  color:red;
+}
+.input-line input{
+  width: 400rpx;
+}
+.yt-btn{
+  background-color: #ED6D02;
+}
+.yt-btn:active{
+  background-color: #F76205 !important;
+}
+.yt-btn-disabled{
+  background-color: #aaa;
+}
+.yt-btn-disabled:active{
+  background-color: #aaa !important;
+}
+.yt-c{
+  color: #E77026;
+}
+.yt-bgc{
+  background-color: #E77026;
+}
+.require .weui-label::before{
+  color:red;
+  content:'*';
+}
+.weui-cell.disabled{
+  background-color: #ccc;
+}
+.mypicker{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.mypicker::after{
+  content: " ";
+  width: 12px;
+  height: 24px;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  background-color: currentColor;
+  color: rgba(0,0,0,.3);
+  -webkit-mask-image: url("data: image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2.454%206.58l1.06-1.06%205.78%205.779a.996.996%200%20010%201.413l-5.78%205.779-1.06-1.061%205.425-5.425-5.425-5.424z%22%20fill%3D%22%23B2B2B2%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data: image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2.454%206.58l1.06-1.06%205.78%205.779a.996.996%200%20010%201.413l-5.78%205.779-1.06-1.061%205.425-5.425-5.425-5.424z%22%20fill%3D%22%23B2B2B2%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  margin-top: -12px;
+}
+mp-cell picker .weui-select{
+  padding-left:0px;
+}
+ec-canvas {
+  width: 100%;
+  height: 600rpx;
+  background-color: white;
+  position: relative;
+}
+/*菜单*/
+.menus{
+  display: flex;
+  width: 100%;
+  padding:10rpx 0rpx;
+  color:#818181;
+  font-weight: bold;
+  font-size:24rpx;
+  flex-wrap:wrap;
+}
+.menus>view{
+  width:150rpx;
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  padding: 10rpx 0rpx;
+  position: relative;
+  height:160rpx;
+}
+.menus>view image{
+  width:100rpx;
+  height:100rpx;
+}
+.menus .badge{
+  width:30rpx;
+  height:30rpx;
+  position:absolute;
+  top:0rpx;
+  right:10rpx;
+  background-color:red;
+  border-radius:30rpx;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.menus .badge>text{
+  color:white;
+  font-size:20rpx;
+}
+.cell-class-warning{
+  color:red !important;
+}
+.cell-class-success{
+  color:green !important;
+}
+.row-class-sum{
+  background-color: #FAC6A0 !important;
+}

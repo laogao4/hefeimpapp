@@ -1,0 +1,96 @@
+.topinfo{
+  position:absolute;
+  top:20rpx;
+  width:710rpx;
+  margin:0rpx 20rpx;
+  background-color: white;
+  border-radius: 10rpx;
+  color:#626262;
+  box-shadow: 0 0 20rpx #aaa;
+}
+.user_head{
+  height:190rpx;
+  display: flex;
+  align-items: center;  
+}
+.img-par{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width:160rpx;
+  height:160rpx;
+  border:1px solid red;
+  margin-left: 20rpx;
+  border-radius: 200rpx;
+}
+.user_head .name{
+  padding-left: 20rpx;
+  font-size:40rpx;
+}
+.user_head .zhiwei{
+  padding-left: 20rpx;
+  font-size:30rpx;
+}
+.user_head .img{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+  overflow: hidden;
+}
+.info{
+  padding-left:40rpx;
+  padding-bottom:40rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+.info>view{
+  display: flex;
+  align-items: center;
+}
+.info image{
+  width:30rpx;
+  height:30rpx;
+  margin-right: 16rpx;
+}
+.seat{
+  position: absolute;
+  width:100%;
+  background-color:white;
+  margin-top: 20rpx;
+}
+.seat-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 10rpx;
+}
+.seat-cell{
+  width:15%;
+  border-radius: 10rpx;
+  border:1px solid #eee;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+}
+.seat-cell.select{
+  background-color: #F2791F;
+  color:white;
+  animation: myscale 1s infinite;
+}
+@keyframes myscale
+{
+  0% {transform:scale(1,1);}
+  50% {transform:scale(1.2,1.2);}
+  100% {transform:scale(1,1);}
+}
+.toggle{
+  width:30%;
+  text-align:right;
+  padding-right:10rpx;
+  font-size: 28rpx;
+  color:#F2791F;
+}
+.car{
+  color:#F2791F;
+}

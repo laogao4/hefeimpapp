@@ -1,0 +1,62 @@
+<view class='user_info'>
+  <block wx:if="{{globalData.userInfo.code==1}}">
+    <view class='user_head' style='background:url({{url}}ekStyle/style/img/app_my_bg.png) center center / 100% 100% no-repeat'>
+      <image src='{{url}}/StaticSource/userimg/{{globalData.userInfo.loginName}}.jpg' class='img'></image>
+      <view class='name'>{{globalData.userInfo.name}}</view>
+    </view>
+    <view class='jixiao'>
+      <view style='border-right:1px solid #e5e5e5;'>
+        <view class='yt-c'>{{globalData.userInfo.jyuser.lastMonthScore}}</view>
+        <view>上月绩效</view>
+      </view>
+      <view style='border-right:1px solid #e5e5e5;'>
+        <view class='yt-c'>{{globalData.userInfo.jyuser.lastMonthScoreRank}}</view>
+        <view>部门内部排名</view>
+      </view>
+      <view bindtap="navigate" data-page='../jixiao/defen_list_person/index'>
+        <view>查看更多 >> </view>
+      </view>
+    </view>
+    <view class='user_infomation'>
+      <view class='line'>
+        <image src='{{url}}ekStyle/style/img/userinfo-name.png'/>
+        <view class='key'>姓名</view>
+        <view class='con'>{{globalData.userInfo.name}}</view>
+      </view>
+      <view class='line'>
+        <image src='{{url}}ekStyle/style/img/userinfo-no.png'/>
+        <view class='key'>工号</view>
+        <view class='con'>{{globalData.userInfo.loginName}}</view>
+      </view>
+      <view class='line'>
+        <image src='{{url}}ekStyle/style/img/userinfo-dept.png'/>
+        <view class='key'>部门</view>
+        <view class='con'>{{globalData.userInfo.jyuser.depName}}</view>
+      </view>
+      <view class='line'>
+        <image src='{{url}}ekStyle/style/img/userinfo-pos.png'/>
+        <view class='key'>岗位</view>
+        <view class='con'>{{globalData.userInfo.jyuser.jobName}}</view>
+      </view>
+      <view class='line last'>
+        <image src='{{url}}ekStyle/style/img/userinfo-status.png'/>
+        <view class='key'>状态</view>
+        <view class='con'>{{globalData.userInfo.jyuser.status}}</view>
+      </view>
+      <view class='line' style='display:none;'>
+        <image src='{{url}}ekStyle/style/img/userinfo-role.png'/>
+        <view class='key'>角色</view>
+        <view class='con'>{{globalData.userInfo.roleName}}</view>
+      </view>
+    </view>
+    <view class='weui-btn weui-btn_primary yt-btn' bindtap="bindJY">解除绑定</view>
+  </block>
+  <block wx:else>
+    <view class='user_head' style='background:url({{url}}ekStyle/style/img/app_my_bg.png) center center / 100% 100% no-repeat'>
+      <view class='img'>
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class='name'>游客</view>
+    </view>
+  </block>
+</view>

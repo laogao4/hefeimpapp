@@ -1,0 +1,48 @@
+<view>
+  <image src="{{url+config.bg2}}" style='width:750rpx;height:{{config.bg2height}}rpx;'></image>
+  <view class='topinfo'>
+    <view class='user_head'>
+      <view class='img-par'>
+        <view class='img'>
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+      </view>
+      <view>
+        <view class='name'>{{data.name}}</view>
+        <view class='zhiwei'>{{data.zhiwei}}</view>
+      </view>
+    </view>
+    <view class='info'>
+      <view wx:if="{{data.room}}"><image src="{{url+config.room}}"/>下榻酒店：{{data.room}}</view>
+      <view><image src="{{url+config.seat}}"/>参会座位：{{data.seat}}</view>
+      <view><image src="{{url+config.canting}}"/>餐桌座位：{{data.canting}}</view>
+      <view wx:if="{{data.car1}}"><image src="{{url+config.car}}"/>
+        到酒店车辆安排：
+        <text class='car'>{{data.car1}}</text>
+        <image src="{{url+config.phone}}" wx:if="{{data.driver1_phone}}" bindtap="showDriver" data-type="1"/>
+      </view>
+      <view wx:if="{{data.car2}}"><image src="{{url+config.car}}"/>
+        到厂区车辆安排：
+        <text class='car'>{{data.car2}}</text>
+        <image src="{{url+config.phone}}" wx:if="{{data.driver2_phone}}" bindtap="showDriver"  data-type="2"/>
+      </view>
+    </view>
+  </view>
+  <view class='seat'>
+      <view style='display:flex;align-items:center;padding: 20rpx 0rpx;'>
+        <view style='width:30%;'></view>
+        <view style='width:40%;font-size:34rpx;text-align:center;font-weight: 600;'>报告会座位表</view>
+        <view class='toggle' bindtap="change">点击查看{{showName?'座位号':'名字'}}</view>
+      </view>
+      <view wx:for="{{config.seat_rows}}" wx:for-item="row" class='seat-row'>
+        <view wx:for="{{config.seat_cols}}" wx:for-item="col" class='seat-cell {{data.row==row+1&&data.col==col+1?"select":""}}'>
+          <block wx:if="{{showName}}">
+            {{seatMap[(row+1)+'-'+(col+1)]?seatMap[(row+1)+'-'+(col+1)]:'无'}}
+          </block>
+          <block wx:if="{{!showName}}">
+            {{row+1}}-{{col+1}}
+          </block>
+        </view>
+      </view>
+    </view>
+</view>

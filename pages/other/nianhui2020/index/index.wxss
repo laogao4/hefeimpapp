@@ -1,0 +1,30 @@
+page{
+  overflow:hidden;
+  background-color: #F2791F;
+}
+input{
+  border: 1px solid white;
+  border-radius: 30px;
+  height: 40px;
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 10px;
+  color:white;
+  margin-top:100rpx;
+}
+.pc{
+  color:white;
+}
+.weui-btn{
+  background-color: white;
+  width:30%;
+  color:#F2791F;
+  font-size: 16px;
+  margin-top:20px;
+}
+.biaoyu{
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  color:white;
+}

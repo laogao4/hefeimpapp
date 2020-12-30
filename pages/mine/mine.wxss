@@ -1,0 +1,68 @@
+.user_info{
+  background: #fff;
+  padding-bottom: 20rpx;
+}
+.user_head{
+  height:300rpx;
+  display: flex;
+  align-items: center;
+}
+.user_head .name{
+  color: white;
+  padding-left: 20rpx;
+  font-size:40rpx;
+}
+.user_head .img{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+  margin-left:20rpx;
+  overflow: hidden;
+}
+.jixiao{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jixiao .yt-c{
+  font-weight: bold;
+  font-size: 40rpx;
+  line-height: 50rpx;
+}
+.jixiao>view{
+  width:33%;
+  text-align: center;
+  padding: 20rpx 0rpx;
+}
+.user_infomation{
+  font-size: 0.85rem;
+}
+.line{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:20rpx 10rpx;
+  border-top: 1px solid #e5e5e5;
+}
+.line.last{
+  border-bottom: 1px solid #e5e5e5;
+}
+.line image{
+  width:80rpx;
+  height:80rpx;
+}
+.line .key{
+  width:200rpx;
+  text-align: left;
+  padding-left:20rpx;
+}
+.line .con{
+  width:470rpx;
+}
+.weui-btn{
+  width: 50;
+  padding:4px 24px;
+  font-size:40rpx;
+  border-radius: 50rpx;
+  margin-top:20rpx;
+}

@@ -1,0 +1,15 @@
+<view>
+  <image src="{{url+config.bg}}" style='width:750rpx;height:1334rpx;'></image>
+  <view style='position:absolute;top:200px;width:750rpx;'>
+    <view class='biaoyu'>热烈欢迎各位领导同事莅临</view>
+    <view class='biaoyu'>许昌裕同观摩指导</view>
+    <input type='text' placeholder="输入姓名查询参观行程" placeholder-class='pc' bindinput="formInputChange" data-field='name'/>
+    <view class='weui-btn' bindtap="commit">查询</view>
+  </view>
+  <view style='position:absolute;bottom:20px;width:750rpx;color:white;font-size:24rpx;padding:0 40rpx;'>
+    <view>温馨提示：</view>
+    <view>1、为了您和他人的安全，请您与会期间做好防疫工作。</view>
+    <view>2、参观车间时，请您不要携带烟火和电子设备。</view>
+    <view style='text-align:right;'>谢谢配合！</view>
+  </view>
+</view>
